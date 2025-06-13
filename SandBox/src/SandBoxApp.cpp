@@ -1,7 +1,7 @@
 
 #include <iostream>
 #include "Minity.h"
-
+#include "spdlog/spdlog.h"
 
 class SandBoxApp :public Minity::Application
 {

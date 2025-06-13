@@ -1,6 +1,7 @@
 #include "Minity/Application.h"
 #include <iostream>
 
+
 namespace Minity
 {
 
@@ -14,10 +15,10 @@ namespace Minity
 
     void Application::Run()
     {
-        while (1)
-        {
-            std::cout << "Application is running." << std::endl;
-        }
+        // while (1)
+        // {
+        //     std::cout << "Application is running." << std::endl;
+        // }
     }
     
 } // namespace Minity
