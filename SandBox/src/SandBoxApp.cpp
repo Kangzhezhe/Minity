@@ -1,9 +1,27 @@
 
 #include <iostream>
-#include "Application.h"
+#include "Minity.h"
 
-int main(){
-    std::cout << "Hello, World!" << std::endl;
-    ApplicationInit();
-    return 0;
+
+class SandBoxApp :public Minity::Application
+{
+private:
+    /* data */
+public:
+    SandBoxApp();
+    ~SandBoxApp();
+};
+
+SandBoxApp::SandBoxApp()
+{
+}
+
+SandBoxApp::~SandBoxApp()
+{
+}
+
+
+Minity::Application* Minity::CreateApplication()
+{
+    return new SandBoxApp();
 }

@@ -5,5 +5,5 @@ add_library(Minity SHARED
 )
 
 target_include_directories(Minity PUBLIC
-    src/Minity
+    src
 )
