@@ -1,26 +1,18 @@
 #include "Minity/Application.h"
+
 #include <iostream>
 
+namespace Minity {
 
-namespace Minity
-{
+	Application::Application(/* args */) {}
 
-    Application::Application(/* args */)
-    {
-    }
+	Application::~Application() {}
 
-    Application::~Application()
-    {
-    }
+	void Application::Run() {
+		// while (1)
+		// {
+		//     std::cout << "Application is running." << std::endl;
+		// }
+	}
 
-    void Application::Run()
-    {
-        // while (1)
-        // {
-        //     std::cout << "Application is running." << std::endl;
-        // }
-    }
-    
-} // namespace Minity
-
-
+}  // namespace Minity

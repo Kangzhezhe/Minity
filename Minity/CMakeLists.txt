@@ -5,9 +5,10 @@ add_subdirectory(vendor/spdlog)
 
 
 # -------------- Minity ------------------------------
+file(GLOB_RECURSE MINITY_SRC src/Minity/*.cpp)
+
 add_library(Minity SHARED
-    src/Minity/Application.cpp
-    src/Minity/example.cpp
+    ${MINITY_SRC}
 )
 
 target_include_directories(Minity PUBLIC

@@ -1,23 +1,19 @@
 #pragma once
 
-namespace Minity
-{
+namespace Minity {
 
-class Application
-    {
-    private:
-        /* data */
-    public:
-        Application();
+	class Application {
+	private:
+		/* data */
+	public:
+		Application();
 
-        virtual ~Application();
+		virtual ~Application();
 
-        void Run();
-    };    
+		void Run();
+	};
 
-// To be defined in client
-Application* CreateApplication();
+	// To be defined in client
+	Application *CreateApplication();
 
-} // namespace Minity
-
-
+}  // namespace Minity
