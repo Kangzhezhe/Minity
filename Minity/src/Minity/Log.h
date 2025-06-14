@@ -1,7 +1,6 @@
 #pragma once
 
 #include "spdlog/spdlog.h"
-#include "debugbreak.h"
 
 
 namespace Minity {
@@ -31,5 +30,5 @@ namespace Minity {
 #define MN_ERROR(...) ::Minity::Log::GetClientLogger()->error(__VA_ARGS__)
 #define MN_FATAL(...) ::Minity::Log::GetClientLogger()->critical(__VA_ARGS__)
 
-#define MN_CORE_ASSERT(x, ...) { if(!(x)) { MN_CORE_FATAL("Assertion Failed: {0}", __VA_ARGS__); debug_break(); } }
-#define MN_ASSERT(x, ...) { if(!(x)) { MN_FATAL("Assertion Failed: {0}", __VA_ARGS__); debug_break(); } }
+#define MN_CORE_ASSERT(x, ...) { if(!(x)) { MN_CORE_FATAL("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } }
+#define MN_ASSERT(x, ...) { if(!(x)) { MN_FATAL("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } }

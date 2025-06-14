@@ -1,6 +1,4 @@
 
-#include <iostream>
-
 #include "Minity.h"
 
 class SandBoxApp : public Minity::Application {
