@@ -13,7 +13,7 @@ namespace Minity {
 	void Application::Run() {
 
 		while (1) {
-			std::cout << "Application is running." << std::endl;
+			// std::cout << "Application is running." << std::endl;
 		}
 	}
 

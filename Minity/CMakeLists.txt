@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 3.27.2)
 
 
 add_subdirectory(vendor/spdlog)
+add_subdirectory(vendor/glfw)
+add_subdirectory(vendor/glad)
 
 
 # -------------- Minity ------------------------------
@@ -22,4 +24,4 @@ target_include_directories(Minity PUBLIC
     src
 )
 
-target_link_libraries(Minity PUBLIC spdlog::spdlog $<$<BOOL:${MINGW}>:ws2_32>)
+target_link_libraries(Minity PUBLIC spdlog::spdlog $<$<BOOL:${MINGW}>:ws2_32> glfw glad)

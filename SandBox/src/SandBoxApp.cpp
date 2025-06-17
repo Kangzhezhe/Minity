@@ -12,4 +12,4 @@ SandBoxApp::SandBoxApp() {}
 
 SandBoxApp::~SandBoxApp() {}
 
-Minity::Application *Minity::CreateApplication() { return new SandBoxApp(); }
+Minity::Application* Minity::CreateApplication() { return new SandBoxApp(); }
