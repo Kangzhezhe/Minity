@@ -2,6 +2,9 @@
 
 #include "Minity/Application.h"
 #include "Minity/Log.h"
+#include "Minity/Layer.h"
+
+#include "Minity/ImGui/ImGuiLayer.h"
 
 
 // -----------------------------------

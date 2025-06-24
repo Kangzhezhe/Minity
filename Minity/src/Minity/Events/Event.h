@@ -79,7 +79,6 @@ namespace Minity {
 		EventDispatcher(Event& event) : m_Event(event) {}
 		~EventDispatcher() = default;
 
-		// F will be deduced by the compiler
 		template <typename T>
 		bool Dispatch(EventFn<T> func) {
 			if (m_Event.GetEventType() == T::GetStaticType()) {
@@ -96,5 +95,6 @@ namespace Minity {
 
 }  // namespace Minity
 
-template <>
-struct fmt::formatter<Minity::Event> : fmt::ostream_formatter {};
+template <typename T>
+struct fmt::formatter<T, char, std::enable_if_t<std::is_base_of<Minity::Event, T>::value>>
+    : fmt::ostream_formatter {};
