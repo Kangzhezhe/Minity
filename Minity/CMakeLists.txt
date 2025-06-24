@@ -3,6 +3,7 @@ cmake_minimum_required(VERSION 3.27.2)
 add_subdirectory(vendor/spdlog)
 add_subdirectory(vendor/glfw)
 add_subdirectory(vendor/glad)
+add_subdirectory(vendor/glm)
 
 # -------------- imgui ------------------------------
 file(GLOB IMGUI_SRC
@@ -35,4 +36,4 @@ target_include_directories(Minity PUBLIC
     vendor/imgui/backends
 )
 
-target_link_libraries(Minity PUBLIC spdlog::spdlog $<$<BOOL:${MINGW}>:ws2_32> glfw glad opengl32)
+target_link_libraries(Minity PUBLIC spdlog::spdlog $<$<BOOL:${MINGW}>:ws2_32> glfw glad opengl32 glm)
